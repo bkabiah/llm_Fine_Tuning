@@ -1,0 +1,28 @@
+# Base model & data
+model_name: "Qwen/Qwen2.5-1.5B-Instruct"
+train_file: "data/processed/train.jsonl"
+val_file: "data/processed/val.jsonl"
+max_seq_length: 1024
+
+# Quantization / precision
+load_in_4bit: false        # set true for QLoRA on low-VRAM GPUs
+bf16: true                 # falls back to fp16 automatically if bf16 unsupported
+
+# Training hyperparameters
+num_train_epochs: 3
+per_device_train_batch_size: 2
+per_device_eval_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 0.0002
+lr_scheduler_type: "cosine"
+warmup_ratio: 0.03
+weight_decay: 0.0
+logging_steps: 10
+eval_strategy: "epoch"
+save_strategy: "epoch"
+save_total_limit: 2
+seed: 42
+
+# Misc
+gradient_checkpointing: true
+report_to: "none"          # set to "wandb" if you want experiment tracking
