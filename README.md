@@ -22,6 +22,7 @@ Dieses Projekt demonstriert die parameter-effiziente Feinabstimmung (LoRA/QLoRA)
 
 
 ```mermaid
+
 graph TD
     A[📧 Rohe Kunden-E-Mail<br/>Deutsch] --> B(⚙️ Prompt Engineering &<br/>Chat-Template Anwendung)
     B --> C{🧠 Qwen2.5-1.5B-Instruct<br/>+ LoRA Adapter (r=16)}
