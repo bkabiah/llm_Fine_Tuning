@@ -24,14 +24,14 @@ Dieses Projekt demonstriert die parameter-effiziente Feinabstimmung (LoRA/QLoRA)
 ```mermaid
 
 graph TD
-    A[📧 Rohe Kunden-E-Mail<br/>Deutsch] --> B(⚙️ Prompt Engineering &<br/>Chat-Template Anwendung)
-    B --> C{🧠 Qwen2.5-1.5B-Instruct<br/>+ LoRA Adapter (r=16)}
-    C -->|Generierung| D[📦 Strukturierte JSON-Ausgabe]
+    A["📧 Rohe Kunden-E-Mail (Deutsch)"] --> B["⚙️ Prompt Engineering & Chat-Template"]
+    B --> C["🧠 Qwen2.5-1.5B-Instruct + LoRA Adapter (r=16)"]
+    C -->|Generierung| D["📦 Strukturierte JSON-Ausgabe"]
     
-    D --> E1[🏷️ Kategorie<br/>z.B. Versand, Rechnung]
-    D --> E2[🔥 Priorität<br/>niedrig, mittel, hoch]
-    D --> E3[😊 Sentiment<br/>positiv, neutral, negativ]
-    D --> E4[✍️ Antwortentwurf<br/>Höflicher, kurzer Text]
+    D --> E1["🏷️ Kategorie (z.B. Versand, Rechnung)"]
+    D --> E2["🔥 Priorität (niedrig, mittel, hoch)"]
+    D --> E3["😊 Sentiment (positiv, neutral, negativ)"]
+    D --> E4["✍️ Antwortentwurf (Höflicher, kurzer Text)"]
 
     style C fill:#e1f5fe,stroke:#01579b,stroke-width:2px
     style D fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
