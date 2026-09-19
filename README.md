@@ -25,7 +25,7 @@ Dieses Projekt demonstriert die parameter-effiziente Feinabstimmung (LoRA/QLoRA)
 
 graph TD
     A[📧 Rohe Kunden-E-Mail<br/>Deutsch] --> B(⚙️ Prompt Engineering &<br/>Chat-Template Anwendung)
-    B --> C{🧠 Qwen2.5-1.5B-Instruct<br/> LoRA Adapter (r=16)}
+    B --> C{🧠 Qwen2.5-1.5B-Instruct<br/>+ LoRA Adapter (r=16)}
     C -->|Generierung| D[📦 Strukturierte JSON-Ausgabe]
     
     D --> E1[🏷️ Kategorie<br/>z.B. Versand, Rechnung]
