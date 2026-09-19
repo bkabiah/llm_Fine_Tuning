@@ -35,8 +35,8 @@ graph TD
     style C fill:#e1f5fe,stroke:#01579b,stroke-width:2px
     style D fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
     style A fill:#fff3e0,stroke:#e65100,stroke-width:2px
-	
-```
+
+	```
 
 ---
 
