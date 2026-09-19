@@ -4,6 +4,13 @@
 replies to German customer-support emails — structured JSON output, end-to-end pipeline,
 reproducible on a single consumer GPU (or free Colab).**
 
+---
+
+## Einführung
+Dieses Projekt demonstriert die parameter-effiziente Feinabstimmung (LoRA/QLoRA) eines kompakten Open-Source-Sprachmodells (Qwen2.5-1.5B-Instruct) speziell für den deutschen Kundenservice. Ziel ist es, eingehende Support-E-Mails automatisch zu analysieren, nach Kategorie, Priorität und Sentiment zu klassifizieren und einen professionellen Antwortentwurf im strikten JSON-Format zu generieren. Die vollständig reproduzierbare End-to-End-Pipeline umfasst synthetische Datengenerierung, Training, automatisierte Evaluierung und eine interaktive Gradio-Demo. Dadurch eignet sich das Projekt ideal als Portfolio-Stück für AI-Engineering-Rollen, da es moderne LLM-Techniken mit einem greifbaren Business-Use-Case verbindet – und das ressourcenschonend auf handelsüblicher Hardware.
+
+---
+
 > 🇩🇪 **Kurzfassung (Deutsch):** Dieses Projekt zeigt, wie ein kleines Open-Source-LLM
 > (Qwen2.5-1.5B-Instruct) mittels LoRA/QLoRA auf deutsche Kundenservice-E-Mails feinabgestimmt
 > wird. Das Modell klassifiziert Anfragen (Kategorie, Priorität, Sentiment) und formuliert
@@ -12,6 +19,27 @@ reproducible on a single consumer GPU (or free Colab).**
 > dokumentiert und reproduzierbar.
 
 ---
+
+
+```mermaid
+graph TD
+    A[📧 Rohe Kunden-E-Mail<br/>Deutsch] --> B(⚙️ Prompt Engineering &<br/>Chat-Template Anwendung)
+    B --> C{🧠 Qwen2.5-1.5B-Instruct<br/>+ LoRA Adapter (r=16)}
+    C -->|Generierung| D[📦 Strukturierte JSON-Ausgabe]
+    
+    D --> E1[🏷️ Kategorie<br/>z.B. Versand, Rechnung]
+    D --> E2[🔥 Priorität<br/>niedrig, mittel, hoch]
+    D --> E3[😊 Sentiment<br/>positiv, neutral, negativ]
+    D --> E4[✍️ Antwortentwurf<br/>Höflicher, kurzer Text]
+
+    style C fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    style D fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    style A fill:#fff3e0,stroke:#e65100,stroke-width:2px
+	
+```
+
+---
+
 
 ## 1. Problem Statement & Business Value
 
